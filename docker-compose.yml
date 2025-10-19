@@ -1,0 +1,13 @@
+services:
+  youtrack:
+    image: jetbrains/youtrack:2025.2.100871
+    container_name: "youtrack"
+    volumes:
+      - /srv/youtrack/data:/opt/youtrack/data
+      - /srv/youtrack/conf:/opt/youtrack/conf
+      - /srv/youtrack/logs:/opt/youtrack/logs
+      - /srv/youtrack/backups:/opt/youtrack/backups
+volumes:
+  postgres:
+    driver: local
+

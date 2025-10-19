@@ -1,0 +1,22 @@
+{
+  "name": "jetbrains-internship-app",
+  "title": "Jetbrains Internship App",
+  "description": "",
+  "$schema": "https://json.schemastore.org/youtrack-app.json",
+  "vendor": {
+    "name": "kpolicar",
+    "url": ""
+  },
+  "icon": "icon.svg",
+  "widgets": [
+
+    {
+      "key": "kpolicar-widget",
+      "name": "Kpolicar-Widget",
+      "indexPath": "kpolicar-widget/index.html",
+      "extensionPoint": "MAIN_MENU_ITEM",
+      "iconPath": "kpolicar-widget/widget-icon.svg",
+      "description": ""
+    }
+  ]
+}
