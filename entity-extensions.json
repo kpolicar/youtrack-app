@@ -1,0 +1,22 @@
+{
+    "entityTypeExtensions": [
+      {
+        "entityType": "Project",
+
+        "properties": {
+          "flag": {
+            "type": "boolean"
+          }
+        }
+      },
+      {
+        "entityType": "AppGlobalStorage",
+        "properties": {
+          "globalFlagged": {
+            "type": "Project",
+            "multi": true
+          }
+        }
+      }
+    ]
+  }
