@@ -7,6 +7,8 @@ services:
       - /srv/youtrack/conf:/opt/youtrack/conf
       - /srv/youtrack/logs:/opt/youtrack/logs
       - /srv/youtrack/backups:/opt/youtrack/backups
+    ports:
+      - "8080:8080"
 volumes:
   postgres:
     driver: local
