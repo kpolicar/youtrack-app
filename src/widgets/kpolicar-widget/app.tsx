@@ -101,17 +101,20 @@ const AppComponent: React.FunctionComponent = () => {
                     return {
                         key: project.id,
                         label: (
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                <Icon
-                                    onClick={() => toggleFlag(project.id, !isFlagged)}
-                                    glyph={flagIcon}
-                                    style={{
-                                        color: isFlagged ? 'var(--ring-warning-color)' : 'var(--ring-icon-secondary-color)',
-                                        fontSize: '16px', // Adjust size
-                                        flexShrink: 0, // Prevent flexibility issues
-                                    }}
-                                    title={isFlagged ? 'Flagged' : 'Not flagged'}
-                                />
+                            <div style={{ display: 'flex', alignItems: 'top', gap: '8px', cursor: 'default' }}>
+                                <div>
+                                    <Icon
+                                        onClick={() => toggleFlag(project.id, !isFlagged)}
+                                        glyph={flagIcon}
+                                        style={{
+                                            color: isFlagged ? 'var(--ring-warning-color)' : 'var(--ring-icon-secondary-color)',
+                                            fontSize: '16px',
+                                            flexShrink: 0,
+                                            cursor: 'pointer'
+                                        }}
+                                        title={isFlagged ? 'Flagged' : 'Not flagged'}
+                                    />
+                                </div>
                                 {project.iconUrl && (
                                     <img
                                         src={project.iconUrl}
@@ -124,18 +127,14 @@ const AppComponent: React.FunctionComponent = () => {
                                         }}
                                     />
                                 )}
-                                <div style={{ flex: 1 }}>
-                                    <a
-                                        href={`/projects/${project.shortName}`}
-                                        style={{
-                                            color: 'var(--ring-link-color)',
-                                            textDecoration: 'none',
-                                            fontWeight: 500,
-                                            display: 'block',
-                                        }}
-                                    >
+                                <a href={`/projects/${project.shortName}`} style={{
+                                    flex: 1,
+                                    color: 'var(--ring-link-color)',
+                                    textDecoration: 'none',
+                                    fontWeight: 500 }}>
+                                    <div>
                                         {project.name}
-                                    </a>
+                                    </div>
                                     {project.description && (
                                         <div
                                             style={{
@@ -147,7 +146,7 @@ const AppComponent: React.FunctionComponent = () => {
                                             {project.description}
                                         </div>
                                     )}
-                                </div>
+                                </a>
                                 <div>
                                     <Button
                                         onClick={() => toggleFlag(project.id, !isFlagged)}
