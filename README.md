@@ -3,6 +3,8 @@
 This project has been spun off the [YouTrack App Quick Start](https://www.jetbrains.com/help/youtrack/devportal/apps-quick-start-guide.html) and was developed as part of the JetBrains internship project: [Building a Sync Engine for YouTrack
 ](https://internship.jetbrains.com/projects/1631).
 
+Similar solution to internship problem description for OctoberCMS: https://github.com/kpolicar/octobercms-backendtrafficcop
+
 ## Run the demo environment
 
 To run the demo environment:
